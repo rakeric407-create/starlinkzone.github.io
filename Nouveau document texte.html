@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>STARLINKZONE – Internet Illimité & Matériel Informatique à Fianarantsoa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="STARLINKZONE : Internet illimité haute vitesse 35 000 Ar / mois à Fianarantsoa (G3QP+25) + vente de matériel informatique professionnel. Zones Wi‑Fi : Tanambao Fierenana, Imandry, Fenomanana, Amponenana, Ampitakely, Tanambao, Ivory, Ivory Avaratra, etc.">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (icônes) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --page-bg: #020617;
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-soft: #60a5fa;
+            --text-main: #0f172a;
+            --text-muted: #6b7280;
+            --border-soft: rgba(15, 23, 42, 0.08);
+            --border-strong: rgba(15, 23, 42, 0.16);
+            --whatsapp: #25D366;
+            --whatsapp-dark: #1ebe5a;
+            --facebook: #1877f2;
+            --radius-lg: 20px;
+            --radius-md: 14px;
+            --radius-pill: 999px;
+            --shadow-soft: 0 14px 40px rgba(15, 23, 42, 0.18);
+            --shadow-strong: 0 26px 60px rgba(15, 23, 42, 0.24);
+            --transition-fast: 0.2s ease;
+            --transition-med: 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--page-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Layout */
+        .page {
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .bg-light {
+            background: #ffffff;
+        }
+
+        .bg-muted {
+            background: #f1f5f9;
+        }
+
+        .bg-dark {
+            background: #020617;
+            color: #e5e7eb;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.78rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #94a3b8;
+            margin-bottom: 8px;
+        }
+
+        .section-label span {
+            width: 28px;
+            height: 1px;
+            background: linear-gradient(90deg, var(--primary-soft), transparent);
+        }
+
+        .section-title {
+            font-size: 2.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .section-subtitle {
+            max-width: 680px;
+            margin: 0 auto;
+            font-size: 0.98rem;
+            color: var(--text-muted);
+        }
+
+        .bg-dark .section-title {
+            color: #e5e7eb;
+        }
+
+        .bg-dark .section-subtitle {
+            color: #9ca3af;
+        }
+
+        /* Header */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(15, 23, 42, 0.96);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-mark {
+            width: 34px;
+            height: 34px;
+            border-radius: 12px;
+            background: radial-gradient(circle at 30% 0, #93c5fd 0, #2563eb 35%, #0f172a 80%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: #e5f0ff;
+            font-weight: 700;
+        }
+
+        .logo-text-main {
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            color: #e5e7eb;
+        }
+
+        .logo-text-main span {
+            color: var(--primary-soft);
+        }
+
+        .logo-tagline {
+            font-size: 0.7rem;
+            color: #9ca3af;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            font-size: 0.9rem;
+            color: #cbd5f5;
+        }
+
+        .main-nav a {
+            position: relative;
+            padding-bottom: 2px;
+            opacity: 0.9;
+            transition: opacity var(--transition-fast), color var(--transition-fast);
+        }
+
+        .main-nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--primary-soft), var(--primary));
+            transition: width var(--transition-med);
+        }
+
+        .main-nav a:hover {
+            opacity: 1;
+            color: #ffffff;
+        }
+
+        .main-nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Nav mobile */
+        .nav-toggle {
+            display: none;
+        }
+
+        .nav-toggle-label {
+            display: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.5);
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .nav-toggle-label span {
+            position: relative;
+            display: block;
+            width: 17px;
+            height: 2px;
+            border-radius: 999px;
+            background: #e5e7eb;
+            transition: transform var(--transition-med), opacity var(--transition-med);
+        }
+
+        .nav-toggle-label span + span {
+            margin-top: 4px;
+        }
+
+        .nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
+            transform: translateY(3px) rotate(45deg);
+        }
+
+        .nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
+            transform: translateY(-3px) rotate(-45deg);
+        }
+
+        .nav-toggle:checked ~ .main-nav {
+            display: flex;
+        }
+
+        /* Boutons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 0.9rem 1.8rem;
+            border-radius: var(--radius-pill);
+            border: 1px solid transparent;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background var(--transition-med), color var(--transition-med),
+                        transform var(--transition-fast), box-shadow var(--transition-med),
+                        border-color var(--transition-med);
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-soft), var(--primary));
+            color: #ffffff;
+            box-shadow: 0 16px 32px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.55);
+        }
+
+        .btn-outline-light {
+            background: transparent;
+            color: #111827;
+            border-color: rgba(15, 23, 42, 0.16);
+        }
+
+        .btn-outline-light:hover {
+            background: #eff6ff;
+            border-color: rgba(37, 99, 235, 0.6);
+            color: var(--primary-dark);
+        }
+
+        .btn-whatsapp {
+            background: var(--whatsapp);
+            color: #ffffff;
+            box-shadow: 0 15px 32px rgba(37, 211, 102, 0.45);
+        }
+
+        .btn-whatsapp:hover {
+            background: var(--whatsapp-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 20px 40px rgba(37, 211, 102, 0.65);
+        }
+
+        .btn-facebook {
+            background: var(--facebook);
+            color: #ffffff;
+            box-shadow: 0 14px 30px rgba(24, 119, 242, 0.5);
+        }
+
+        .btn-facebook:hover {
+            background: #0f63d5;
+            transform: translateY(-1px);
+            box-shadow: 0 18px 40px rgba(24, 119, 242, 0.7);
+        }
+
+        .btn-sm {
+            padding: 0.65rem 1.3rem;
+            font-size: 0.85rem;
+        }
+
+        .btn-icon {
+            font-size: 1rem;
+        }
+
+        /* HERO */
+        .hero {
+            background: radial-gradient(circle at top left, #dbeafe 0, #eff6ff 40%, #ffffff 100%);
+        }
+
+        .hero-inner {
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-kicker {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: #6b7280;
+            margin-bottom: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-kicker-tag {
+            padding: 2px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(37, 99, 235, 0.25);
+            background: rgba(37, 99, 235, 0.04);
+            letter-spacing: 0;
+            font-size: 0.73rem;
+            text-transform: none;
+            color: #1d4ed8;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 3.1vw + 1.6rem, 3.7rem);
+            line-height: 1.08;
+            margin-bottom: 6px;
+            color: #0f172a;
+        }
+
+        .hero-title span {
+            color: var(--primary-dark);
+        }
+
+        .hero-subline {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #1e293b;
+            margin-bottom: 14px;
+        }
+
+        .hero-text {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 22px;
+            max-width: 540px;
+        }
+
+        .hero-price-row {
+            display: flex;
+            align-items: baseline;
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+
+        .hero-price {
+            font-size: 2.3rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .hero-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            margin-left: 4px;
+        }
+
+        .hero-note {
+            font-size: 0.94rem;
+            color: var(--text-muted);
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 22px;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            font-size: 0.82rem;
+            color: #64748b;
+        }
+
+        .hero-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hero-meta-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: var(--primary-soft);
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-image-card {
+            border-radius: 24px;
+            overflow: hidden;
+            background: #0f172a;
+            box-shadow: var(--shadow-strong);
+            border: 1px solid rgba(15, 23, 42, 0.25);
+            position: relative;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            filter: saturate(1.1);
+        }
+
+        .hero-banner {
+            position: absolute;
+            inset: auto 18px 18px 18px;
+            background: rgba(15, 23, 42, 0.86);
+            backdrop-filter: blur(10px);
+            border-radius: 18px;
+            padding: 12px 14px;
+            color: #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .hero-banner-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .hero-banner-line {
+            font-size: 0.8rem;
+            color: #cbd5f5;
+        }
+
+        .hero-badge-live {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: rgba(22, 101, 52, 0.9);
+            color: #bbf7d0;
+            font-size: 0.75rem;
+        }
+
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: #22c55e;
+        }
+
+        /* NOS AFFICHES – publicités réelles */
+        .posters-layout {
+            display: grid;
+            grid-template-columns: 1.35fr 1fr;
+            gap: 24px;
+            align-items: flex-start;
+        }
+
+        .posters-intro {
+            font-size: 0.96rem;
+            color: #4b5563;
+            margin-bottom: 18px;
+        }
+
+        .poster-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: #9ca3af;
+            margin-bottom: 8px;
+        }
+
+        .poster-tag i {
+            color: var(--primary);
+        }
+
+        .posters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .poster-card {
+            border-radius: 18px;
+            overflow: hidden;
+            background: #020617;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-soft);
+            position: relative;
+            cursor: pointer;
+            transition: transform var(--transition-med), box-shadow var(--transition-med), border-color var(--transition-med);
+        }
+
+        .poster-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform var(--transition-med), opacity var(--transition-med);
+        }
+
+        .poster-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent 55%);
+            opacity: 0;
+            transition: opacity var(--transition-med);
+        }
+
+        .poster-content {
+            position: absolute;
+            left: 16px;
+            right: 16px;
+            bottom: 16px;
+            color: #e5e7eb;
+            transform: translateY(10px);
+            opacity: 0;
+            transition: transform var(--transition-med), opacity var(--transition-med);
+        }
+
+        .poster-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: #93c5fd;
+            margin-bottom: 4px;
+        }
+
+        .poster-title {
+            font-size: 0.98rem;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .poster-text {
+            font-size: 0.8rem;
+            color: #cbd5f5;
+        }
+
+        .poster-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-strong);
+            border-color: rgba(37, 99, 235, 0.5);
+        }
+
+        .poster-card:hover .poster-image {
+            transform: scale(1.05);
+            opacity: 0.95;
+        }
+
+        .poster-card:hover .poster-overlay {
+            opacity: 1;
+        }
+
+        .poster-card:hover .poster-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Localisation */
+        .location-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+            gap: 28px;
+            align-items: flex-start;
+        }
+
+        .location-text {
+            font-size: 0.96rem;
+            color: var(--text-muted);
+        }
+
+        .location-highlight {
+            margin-top: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 0.9rem;
+        }
+
+        .location-highlight span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #111827;
+        }
+
+        .location-highlight i {
+            color: var(--primary);
+        }
+
+        .zones-card {
+            margin-top: 18px;
+            padding: 14px 14px 12px;
+            border-radius: 16px;
+            background: #f9fafb;
+            border: 1px solid var(--border-soft);
+        }
+
+        .zones-card h3 {
+            font-size: 0.96rem;
+            margin-bottom: 4px;
+            color: #111827;
+        }
+
+        .zones-card p {
+            font-size: 0.86rem;
+            color: #4b5563;
+            margin-bottom: 6px;
+        }
+
+        .zones-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 6px;
+        }
+
+        .zone-chip {
+            padding: 4px 10px;
+            font-size: 0.78rem;
+            border-radius: 999px;
+            background: #e0f2fe;
+            color: #1d4ed8;
+            border: 1px solid rgba(37, 99, 235, 0.35);
+        }
+
+        .map-wrapper {
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-soft);
+        }
+
+        .map-wrapper iframe {
+            display: block;
+            width: 100%;
+            height: 280px;
+            border: 0;
+        }
+
+        /* Facebook */
+        .facebook-card {
+            max-width: 640px;
+            margin: 0 auto;
+            background: #020617;
+            border-radius: var(--radius-lg);
+            padding: 26px 24px 24px;
+            box-shadow: var(--shadow-strong);
+            border: 1px solid rgba(148, 163, 184, 0.5);
+            text-align: center;
+        }
+
+        .facebook-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .facebook-text {
+            font-size: 0.95rem;
+            color: #9ca3af;
+            margin-bottom: 18px;
+        }
+
+        /* Matériel informatique */
+        .hardware-header-intro {
+            text-align: center;
+            margin-bottom: 26px;
+            font-size: 0.96rem;
+            color: #6b7280;
+        }
+
+        .hardware-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 26px;
+        }
+
+        .hardware-badge {
+            font-size: 0.78rem;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: #eff6ff;
+            color: #1d4ed8;
+            border: 1px solid rgba(37, 99, 235, 0.3);
+        }
+
+        .hardware-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 22px;
+        }
+
+        .product-card {
+            background: #ffffff;
+            border-radius: 18px;
+            border: 1px solid var(--border-soft);
+            box-shadow: var(--shadow-soft);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: transform var(--transition-med), box-shadow var(--transition-med), border-color var(--transition-med);
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-strong);
+            border-color: rgba(37, 99, 235, 0.4);
+        }
+
+        .product-image-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            transition: transform var(--transition-med), opacity var(--transition-med);
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+            opacity: 0.96;
+        }
+
+        .product-body {
+            padding: 16px 18px 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            flex-grow: 1;
+        }
+
+        .product-tag {
+            font-size: 0.75rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #9ca3af;
+        }
+
+        .product-title {
+            font-size: 1.02rem;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .product-brief {
+            font-size: 0.9rem;
+            color: #4b5563;
+        }
+
+        .product-description {
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        .product-meta {
+            font-size: 0.8rem;
+            color: #9ca3af;
+        }
+
+        .product-actions {
+            margin-top: 10px;
+        }
+
+        .product-actions small {
+            display: block;
+            font-size: 0.75rem;
+            color: #9ca3af;
+            margin-top: 4px;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: #020617;
+            color: #9ca3af;
+            border-top: 1px solid rgba(148, 163, 184, 0.4);
+            padding: 20px 0 18px;
+            font-size: 0.87rem;
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .footer-main {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .footer-main strong {
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            color: #e5e7eb;
+        }
+
+        .footer-meta {
+            text-align: right;
+        }
+
+        .footer-meta div + div {
+            margin-top: 2px;
+        }
+
+        .footer-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .footer-whatsapp i {
+            color: var(--whatsapp);
+        }
+
+        /* Responsive */
+        @media (max-width: 960px) {
+            .hero-inner {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        @media (max-width: 840px) {
+            .posters-layout {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-inner {
+                padding: 10px 0;
+            }
+
+            .main-nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(15, 23, 42, 0.98);
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px 20px 14px;
+                border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+            }
+
+            .nav-toggle-label {
+                display: flex;
+            }
+
+            .hero {
+                padding-top: 64px;
+            }
+
+            .location-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .map-wrapper iframe {
+                height: 260px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .section {
+                padding: 64px 0;
+            }
+
+            .hero-actions {
+                gap: 10px;
+            }
+
+            .hero-price-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-meta {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <div class="logo-mark">SZ</div>
+                <div>
+                    <div class="logo-text-main">STARLINK<span>ZONE</span></div>
+                    <div class="logo-tagline">Internet illimité & Solutions Wi‑Fi</div>
+                </div>
+            </div>
+
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="main-nav">
+                <a href="#hero">Accueil</a>
+                <a href="#affiches">Publicités</a>
+                <a href="#localisation">Localisation</a>
+                <a href="#facebook">Facebook</a>
+                <a href="#materiel">Matériel</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECTION 1 : HERO -->
+    <section id="hero" class="section hero bg-light">
+        <div class="container hero-inner">
+            <div>
+                <div class="hero-kicker">
+                    STARLINKZONE
+                    <span class="hero-kicker-tag">Fianarantsoa · Opérateur Internet local</span>
+                </div>
+                <h1 class="hero-title"><span>STARLINKZONE</span></h1>
+                <p class="hero-subline">Internet Illimité Haute Vitesse</p>
+                <p class="hero-text">
+                    Connexion Starlink illimitée, optimisée par STARLINKZONE pour les maisons, bureaux,
+                    cybercafés et entreprises à Fianarantsoa et partout à Madagascar.
+                </p>
+
+                <div class="hero-price-row">
+                    <p class="hero-price">
+                        35 000 Ar<span>/ mois</span>
+                    </p>
+                    <p class="hero-note">
+                        Abonnement unique – Connexion rapide et stable
+                    </p>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="https://wa.me/261382817100?text=Bonjour%2C%20je%20souhaite%20m%27abonner%20%C3%A0%20STARLINKZONE%2035%20000Ar"
+                       target="_blank" rel="noopener"
+                       class="btn btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp btn-icon" aria-hidden="true"></i>
+                        ACHETER VIA WHATSAPP
+                    </a>
+                    <a href="#affiches" class="btn btn-outline-light">
+                        Voir les publicités de nos offres
+                    </a>
+                </div>
+
+                <div class="hero-meta">
+                    <div class="hero-meta-item">
+                        <span class="hero-meta-dot"></span>
+                        Internet illimité 35 000 Ar / mois
+                    </div>
+                    <div class="hero-meta-item">
+                        <span class="hero-meta-dot"></span>
+                        Zone : Fianarantsoa & Madagascar
+                    </div>
+                    <div class="hero-meta-item">
+                        <span class="hero-meta-dot"></span>
+                        Support WhatsApp : 038 28 171 00
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <!-- Image de publicité principale : place ton fichier dans /images/hero-starlinkzone.jpg -->
+                <div class="hero-image-card">
+                    <img src="images/hero-starlinkzone.jpg"
+                         alt="Publicité STARLINKZONE – Clients connectés en Wi‑Fi"
+                         class="hero-image">
+                    <div class="hero-badge-live">
+                        <span class="hero-badge-dot"></span>
+                        Internet en service à Fianarantsoa
+                    </div>
+                    <div class="hero-banner">
+                        <div class="hero-banner-title">Offre Internet Illimité – 35 000 Ar / mois</div>
+                        <div class="hero-banner-line">
+                            Installation rapide · Wi‑Fi quartiers Tanambao, Imandry, Fenomanana, Amponenana, Ampitakely, Ivory, Ivory Avaratra…
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2 : NOS AFFICHES (PUBLICITÉS RÉELLES) -->
+    <section id="affiches" class="section bg-muted">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label"><span></span> PUBLICITÉS & AFFICHES</div>
+                <h2 class="section-title">Nos Offres en Image</h2>
+                <p class="section-subtitle">
+                    Exemples de visuels publicitaires pour STARLINKZONE : affiches, posts Facebook, stories
+                    et bannières pour présenter votre offre Internet illimitée et vos packs Wi‑Fi.
+                </p>
+            </div>
+
+            <div class="posters-layout">
+                <div>
+                    <div class="poster-tag">
+                        <i class="fa-solid fa-bullhorn" aria-hidden="true"></i>
+                        Campagnes STARLINKZONE
+                    </div>
+                    <p class="posters-intro">
+                        Utilisez ces formats comme modèle pour créer vos propres publicités&nbsp;: une image claire,
+                        un prix visible, le bénéfice principal (Internet illimité) et le bouton WhatsApp pour acheter.
+                        Vous pouvez remplacer les images ci‑dessous par vos créations graphiques réelles.
+                    </p>
+                </div>
+
+                <div class="posters-grid">
+                    <!-- Affiche 1 – place ton fichier dans /images/affiche-foyer.jpg -->
+                    <article class="poster-card">
+                        <img src="images/affiche-foyer.jpg"
+                             alt="Affiche STARLINKZONE – Internet illimité pour le foyer"
+                             class="poster-image">
+                        <div class="poster-overlay"></div>
+                        <div class="poster-content">
+                            <div class="poster-label">Publicité foyer</div>
+                            <h3 class="poster-title">Internet illimité à la maison</h3>
+                            <p class="poster-text">
+                                Streaming, télétravail, cours en ligne : 35 000 Ar / mois seulement via STARLINKZONE.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Affiche 2 – place ton fichier dans /images/affiche-entreprise.jpg -->
+                    <article class="poster-card">
+                        <img src="images/affiche-entreprise.jpg"
+                             alt="Affiche STARLINKZONE – Connexion pour entreprises"
+                             class="poster-image">
+                        <div class="poster-overlay"></div>
+                        <div class="poster-content">
+                            <div class="poster-label">Publicité entreprise</div>
+                            <h3 class="poster-title">Connexion pour bureaux & PME</h3>
+                            <p class="poster-text">
+                                Réseau stable pour vos équipes, visioconférences et applications professionnelles.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Affiche 3 – place ton fichier dans /images/affiche-quartier.jpg -->
+                    <article class="poster-card">
+                        <img src="images/affiche-quartier.jpg"
+                             alt="Affiche STARLINKZONE – Zones Wi‑Fi dans les quartiers de Fianarantsoa"
+                             class="poster-image">
+                        <div class="poster-overlay"></div>
+                        <div class="poster-content">
+                            <div class="poster-label">Publicité quartier</div>
+                            <h3 class="poster-title">Zones Wi‑Fi STARLINKZONE</h3>
+                            <p class="poster-text">
+                                Tanambao Fierenana, Imandry, Fenomanana, Amponenana, Ampitakely, Tanambao, Ivory, Ivory Avaratra, etc.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3 : NOTRE POSITION -->
+    <section id="localisation" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label"><span></span> LOCALISATION & ZONE</div>
+                <h2 class="section-title">Notre Localisation</h2>
+                <p class="section-subtitle">
+                    STARLINKZONE est basé à Fianarantsoa avec une couverture Internet illimitée sur Madagascar,
+                    et un réseau Wi‑Fi déployé dans plusieurs quartiers stratégiques.
+                </p>
+            </div>
+
+            <div class="location-grid">
+                <div class="location-text">
+                    <p>
+                        Nous opérons depuis Fianarantsoa et intervenons sur l’ensemble du territoire malgache
+                        pour installer et optimiser votre connexion Starlink. Pour nous retrouver facilement,
+                        vous pouvez utiliser notre Plus Code Google ci‑dessous.
+                    </p>
+                    <p>
+                        Nous travaillons aussi avec des partenaires locaux afin de garantir une couverture
+                        fiable dans les zones urbaines, périurbaines et rurales.
+                    </p>
+
+                    <div class="location-highlight">
+                        <span>
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                            <strong>Adresse technique (Plus Code)&nbsp;:</strong>&nbsp;G3QP+25, Fianarantsoa
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-globe-africa" aria-hidden="true"></i>
+                            <strong>Zone de couverture&nbsp;:</strong>&nbsp;Madagascar
+                        </span>
+                        <span>
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                            <strong>Contact WhatsApp&nbsp;:</strong>&nbsp;038 28 171 00
+                        </span>
+                    </div>
+
+                    <div class="zones-card">
+                        <h3>Zones Wi‑Fi ciblées à Fianarantsoa</h3>
+                        <p>
+                            Nous concentrons nos points d’accès Wi‑Fi sur plusieurs quartiers stratégiques
+                            pour garantir une connexion de qualité à proximité de nos clients.
+                        </p>
+                        <div class="zones-chips">
+                            <span class="zone-chip">Tanambao Fierenana</span>
+                            <span class="zone-chip">Imandry</span>
+                            <span class="zone-chip">Fenomanana</span>
+                            <span class="zone-chip">Amponenana</span>
+                            <span class="zone-chip">Ampitakely</span>
+                            <span class="zone-chip">Tanambao</span>
+                            <span class="zone-chip">Ivory</span>
+                            <span class="zone-chip">Ivory Avaratra</span>
+                            <span class="zone-chip">Autres zones sur demande</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-wrapper">
+                    <!-- Carte centrée sur G3QP+25, Fianarantsoa -->
+                    <iframe
+                        src="https://www.google.com/maps?q=G3QP%2B25%20Fianarantsoa%20Madagascar&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4 : PAGE FACEBOOK -->
+    <section id="facebook" class="section bg-dark">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label"><span></span> RÉSEAUX SOCIAUX</div>
+                <h2 class="section-title">Suivez-nous sur Facebook</h2>
+                <p class="section-subtitle">
+                    Nous publions régulièrement des publicités réelles de nos services, des témoignages clients
+                    et des annonces de nouvelles zones couvertes. Rejoignez STARLINKZONE sur Facebook.
+                </p>
+            </div>
+
+            <div class="facebook-card">
+                <div class="facebook-title">Page de vente STARLINKZONE</div>
+                <p class="facebook-text">
+                    Retrouvez nos visuels publicitaires, nos offres Internet illimitées, les promos
+                    saisonnières et toutes les informations pratiques pour vous abonner ou acheter du matériel.
+                </p>
+                <a href="https://www.facebook.com/profile.php?id=100093496096226&locale=fr_FR"
+                   target="_blank" rel="noopener"
+                   class="btn btn-facebook">
+                    <i class="fa-brands fa-facebook-f btn-icon" aria-hidden="true"></i>
+                    Voir notre page de vente
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5 : VENTE MATÉRIEL INFORMATIQUE -->
+    <section id="materiel" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label"><span></span> BOUTIQUE MATÉRIEL</div>
+                <h2 class="section-title">Vente de Matériel Informatique</h2>
+                <p class="section-subtitle">
+                    En complément de l’abonnement Internet illimité, STARLINKZONE vous propose une sélection
+                    de matériel réseau et informatique professionnel pour construire une installation fiable.
+                </p>
+            </div>
+
+            <div class="hardware-header-intro">
+                Chaque fiche produit ci‑dessous présente un titre clair, une description brève et un bouton
+                d’achat direct via WhatsApp pour une commande rapide avec votre conseiller STARLINKZONE.
+            </div>
+
+            <div class="hardware-badges">
+                <span class="hardware-badge">Routeurs & Wi‑Fi</span>
+                <span class="hardware-badge">Liaisons CPE 5&nbsp;GHz</span>
+                <span class="hardware-badge">Ordinateurs</span>
+                <span class="hardware-badge">Switchs réseau</span>
+                <span class="hardware-badge">Câbles Ethernet</span>
+            </div>
+
+            <div class="hardware-grid">
+                <!-- Routeur WiFi – image dans /images/routeur-wifi.jpg -->
+                <article class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="images/routeur-wifi.jpg"
+                             alt="Routeur Wi‑Fi pour connexion STARLINKZONE"
+                             class="product-image">
+                    </div>
+                    <div class="product-body">
+                        <div class="product-tag">RÉSEAU & WI‑FI</div>
+                        <h3 class="product-title">Routeur Wi‑Fi Haut Débit</h3>
+                        <p class="product-brief">
+                            Routeur idéal pour diffuser la connexion STARLINKZONE dans toute votre maison ou votre bureau.
+                        </p>
+                        <p class="product-description">
+                            Couverture optimisée, gestion multi‑utilisateurs, fonctions de contrôle parental
+                            et de QoS pour prioriser certains usages (visioconférence, streaming…).
+                        </p>
+                        <p class="product-meta">Recommandé pour foyers, bureaux, cybercafés.</p>
+                        <div class="product-actions">
+                            <a href="https://wa.me/261382817100?text=Bonjour%2C%20je%20souhaite%20ACHETER%20un%20Routeur%20WiFi%20chez%20STARLINKZONE"
+                               target="_blank" rel="noopener"
+                               class="btn btn-whatsapp btn-sm">
+                                <i class="fa-brands fa-whatsapp btn-icon" aria-hidden="true"></i>
+                                ACHETER CE PRODUIT
+                            </a>
+                            <small>Indiquez la surface à couvrir pour un conseil adapté.</small>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CPE 5GHz – image dans /images/cpe-5ghz.jpg -->
+                <article class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="images/cpe-5ghz.jpg"
+                             alt="CPE 5GHz pour liaisons longue distance"
+                             class="product-image">
+                    </div>
+                    <div class="product-body">
+                        <div class="product-tag">EXTENSION DE RÉSEAU</div>
+                        <h3 class="product-title">CPE 5&nbsp;GHz Point‑à‑Point</h3>
+                        <p class="product-brief">
+                            Solution professionnelle pour relier deux sites distants en Wi‑Fi (maison, dépôt, bureau).
+                        </p>
+                        <p class="product-description">
+                            Portée longue distance, fréquence 5&nbsp;GHz pour limiter les interférences,
+                            idéale pour partager votre connexion STARLINKZONE entre plusieurs bâtiments.
+                        </p>
+                        <p class="product-meta">Étude du lien et conseils d’orientation sur demande.</p>
+                        <div class="product-actions">
+                            <a href="https://wa.me/261382817100?text=Bonjour%2C%20je%20souhaite%20ACHETER%20un%20CPE%205GHz%20chez%20STARLINKZONE"
+                               target="_blank" rel="noopener"
+                               class="btn btn-whatsapp btn-sm">
+                                <i class="fa-brands fa-whatsapp btn-icon" aria-hidden="true"></i>
+                                ACHETER CE PRODUIT
+                            </a>
+                            <small>Précisez la distance estimée entre les deux points à relier.</small>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Ordinateur – image dans /images/ordinateur.jpg -->
+                <article class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="images/ordinateur.jpg"
+                             alt="Ordinateur pour Internet et bureautique"
+                             class="product-image">
+                    </div>
+                    <div class="product-body">
+                        <div class="product-tag">POSTES UTILISATEURS</div>
+                        <h3 class="product-title">Ordinateur pour Internet & Bureautique</h3>
+                        <p class="product-brief">
+                            Ordinateurs prêts à l’emploi pour profiter au maximum de votre connexion STARLINKZONE.
+                        </p>
+                        <p class="product-description">
+                            Configurations adaptées au télétravail, à la bureautique, à la gestion commerciale
+                            et aux usages Internet intensifs. Possibilité de configurer mémoire, disque et logiciels.
+                        </p>
+                        <p class="product-meta">Solutions pour particuliers, PME, écoles.</p>
+                        <div class="product-actions">
+                            <a href="https://wa.me/261382817100?text=Bonjour%2C%20je%20souhaite%20ACHETER%20un%20Ordinateur%20chez%20STARLINKZONE"
+                               target="_blank" rel="noopener"
+                               class="btn btn-whatsapp btn-sm">
+                                <i class="fa-brands fa-whatsapp btn-icon" aria-hidden="true"></i>
+                                ACHETER CE PRODUIT
+                            </a>
+                            <small>Donnez votre budget et votre usage principal pour un devis précis.</small>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Switch réseau – image dans /images/switch-reseau.jpg -->
+                <article class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="images/switch-reseau.jpg"
+                             alt="Switch réseau Ethernet"
+                             class="product-image">
+                    </div>
+                    <div class="product-body">
+                        <div class="product-tag">DISTRIBUTION RÉSEAU</div>
+                        <h3 class="product-title">Switch Réseau Ethernet</h3>
+                        <p class="product-brief">
+                            Connectez plusieurs ordinateurs, caméras IP et points d’accès à votre réseau.
+                        </p>
+                        <p class="product-description">
+                            Modèles 5, 8, 16 ports (et plus), avec options PoE pour alimenter vos caméras
+                            et bornes Wi‑Fi directement via le câble réseau.
+                        </p>
+                        <p class="product-meta">Convient aux installations domestiques et PME.</p>
+                        <div class="product-actions">
+                            <a href="https://wa.me/261382817100?text=Bonjour%2C%20je%20souhaite%20ACHETER%20un%20Switch%20reseau%20chez%20STARLINKZONE"
+                               target="_blank" rel="noopener"
+                               class="btn btn-whatsapp btn-sm">
+                                <i class="fa-brands fa-whatsapp btn-icon" aria-hidden="true"></i>
+                                ACHETER CE PRODUIT
+                            </a>
+                            <small>Indiquez le nombre de ports et si vous avez besoin de PoE.</small>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Câble réseau – image dans /images/cable-reseau.jpg -->
+                <article class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="images/cable-reseau.jpg"
+                             alt="Câbles réseau Ethernet"
+                             class="product-image">
+                    </div>
+                    <div class="product-body">
+                        <div class="product-tag">CONNECTIQUE</div>
+                        <h3 class="product-title">Câbles Réseau Ethernet</h3>
+                        <p class="product-brief">
+                            Câbles Cat5e, Cat6, etc., pour relier routeurs, switchs, ordinateurs et caméras.
+                        </p>
+                        <p class="product-description">
+                            Câbles prêts à l’emploi ou à la coupe, pour des liaisons filaires stables
+                            et des débits élevés compatibles avec Starlink.
+                        </p>
+                        <p class="product-meta">Disponibles en plusieurs longueurs.</p>
+                        <div class="product-actions">
+                            <a href="https://wa.me/261382817100?text=Bonjour%2C%20je%20souhaite%20ACHETER%20des%20Cables%20reseau%20chez%20STARLINKZONE"
+                               target="_blank" rel="noopener"
+                               class="btn btn-whatsapp btn-sm">
+                                <i class="fa-brands fa-whatsapp btn-icon" aria-hidden="true"></i>
+                                ACHETER CE PRODUIT
+                            </a>
+                            <small>Précisez la longueur, la catégorie et la quantité souhaitées.</small>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-main">
+                <strong>STARLINKZONE</strong>
+                <div>Internet Illimité 35 000 Ar / mois</div>
+            </div>
+            <div class="footer-meta">
+                <div>
+                    WhatsApp :
+                    <a href="https://wa.me/261382817100" target="_blank" rel="noopener" class="footer-whatsapp">
+                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        038 28 171 00
+                    </a>
+                </div>
+                <div>© 2026 STARLINKZONE – Tous droits réservés.</div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>
